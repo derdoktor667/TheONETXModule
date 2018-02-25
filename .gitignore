@@ -297,3 +297,11 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+# some manual changes
+__vm/
+.vs/
+.vscode/
+Debug/
+PCB/fp-lib-table
+PCB/TheONETXParts.bak
