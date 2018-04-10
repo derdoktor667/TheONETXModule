@@ -18,13 +18,10 @@
     <None Include="TheONETXModule.ino" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PinOut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="__vm\.TheONETXModule.vsarduino.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="libs\PinOut.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="libs\TheONETXModule.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

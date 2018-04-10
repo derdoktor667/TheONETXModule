@@ -1,70 +1,76 @@
-/*  
+/*
   The ONE TX Module
   derdoktor667@gmail.com
- */
+*/
 
-// ...enable debugging globally for now
-#define DEBUG
+#include "PinOut.h"
 
-// ...grabbin´ all the parts
-#include <avr\eeprom.h>
-#include <util\atomic.h>
-#include "libs\PinOut.h"
-#include "libs\TheONETXModule.h"
+// ...somw global definitions
+#define CPU_MULTI	(F_CPU/8000000)
 
-// ...and some variables
-volatile int No_PPM_Signal_Found = true;
-static uint8_t txid[4];
+#define	AILERON  0
+#define	ELEVATOR 1
+#define	THROTTLE 2
+#define	RUDDER   3
+
+#define PPM_MAX_100 2012
+#define PPM_MIN_100 988
+
+// ...the PPM Array to store the Channel values
+int PPM[16];
 
 void setup() {
-	
-	// ...get really "random"
-	randomSeed((analogRead(A0) &0x1F) | (analogRead(A1) << 5));
-	
-	for (uint8_t i = 0; i < 4; i++) {
-		
-		txid[i] = random();
-	
-		}
 
-	// ...there will be no PPM Signal on firing up
-	No_PPM_Signal_Found = true;
+	// ...listen all up
+	DDRB=0x00;
+	DDRC=0x00;
+	DDRD=0x00;
 
-	// ...fire up the serial port
+	// Update LED
+	LED_off;
+	LED_output;
+	
+	// ...start the serial
 	Serial.begin(57600);
+	Serial.println("Waiting for PPM Signal...");
 
-#ifdef DEBUG
+	// ...the PPM_Pin is an input
+	pinMode(PPM_Pin, INPUT);
 
-	// ...greetings
+	// ...the interrupt for the PPM_ISR
+	attachInterrupt(digitalPinToInterrupt(PPM_Pin), PPM_Reader, CHANGE);
 
-	Serial.println("  ");
-	Serial.println("---------------------------");
-	Serial.println("Starting TheONETXModule... ");
-	Serial.println("  ");
+	// ...the right timers
+	TCCR1A = 0;
+	TCCR1B = 0;
+	TCCR1B |= (1 << CS11);
 
-#endif // DEBUG
-
-	// ...set the I/O Pins
-	pinMode(PPM_pin, INPUT);
-	pinMode(CE_pin, OUTPUT);
-	pinMode(SCK_pin, OUTPUT);
-	pinMode(MOSI_pin, OUTPUT);
-	pinMode(MISO_pin, INPUT);
-	pinMode(NRF24_CS_pin, OUTPUT);
-	pinMode(A7105_CS_pin, OUTPUT);
-	pinMode(LED_pin, OUTPUT);
-
-	// ...cut the lights
-	digitalWrite(LED_pin, LOW);
-	
 }
 
 void loop() {
 
-	while (No_PPM_Signal_Found) {
+}
 
-		BlinkyLED(LED_pin, 100);
+void PPM_Reader() {
 
+	static unsigned int PULSE;
+	static unsigned long COUNTER;
+	static byte CHANNEL;
+	static unsigned long LAST_MICROS;
+
+	COUNTER = TCNT1;
+	TCNT1 = 0;
+
+	if (COUNTER < 510 * CPU_MULTI) {  //must be a pulse if less than 510us
+		PULSE = COUNTER;
 	}
-
+	else if (COUNTER > 1910 * CPU_MULTI) {  //sync pulse
+		CHANNEL = 0;
+	}
+	else {  //servo values between 710us and 2420us will end up here
+		PPM[CHANNEL] = (COUNTER + PULSE) / CPU_MULTI;
+		// Serial.print(PPM[CHANNEL]);
+		// Serial.print("  ");
+		CHANNEL++;
+	}
 }
