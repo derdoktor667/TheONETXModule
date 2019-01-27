@@ -1,0 +1,500 @@
+ (routes 
+  (resolution um 10)
+  (parser
+  )
+  (structure_out
+   (layer F.Cu (type signal)
+   )
+   (layer B.Cu (type signal)
+   )
+  )
+  (library_out
+   (padstack "Via[0-1]_750:450_um"
+    (shape (circ F.Cu 7500 0 0))
+    (shape (circ B.Cu 7500 0 0))
+   )
+  )
+  (network_out
+   (Net /VBAT+ 
+   (wire (path F.Cu 6000  1445000 -1062500 1445000 -1036320 1506220 -1036320
+     1506220 -882650 1562100 -882650 1562100 -772160 1560830 -772160
+     1560830 -764540 1410000 -764540 1410000 -792500)
+    (connect (terminal pin U1-1) (terminal pin 22uF1-1))
+   )
+   (wire (path F.Cu 6000  1417500 -1153300 1527810 -1153300 1527810 -1200800
+     1550000 -1200800)
+    (connect (terminal pin D1-2) (terminal pin J1-3))
+   )
+   (wire (path B.Cu 6000  1417500 -1102500 1417500 -1062500 1445000 -1062500)
+    (connect (terminal pin D1-1) (terminal pin U1-1))
+   )
+   (wire (path B.Cu 6000  1417500 -1153300 1417500 -1102500)
+    (connect (terminal pin D1-2) (terminal pin D1-1))
+   )
+   (wire (path F.Cu 6000  1372400 -1240000 1397000 -1240000 1397000 -1153300
+     1417500 -1153300)
+    (connect (terminal pin A1-30) (terminal pin D1-2))
+   )
+   )
+   (Net GND 
+   (wire (path B.Cu 6000  1451300 -747500 1451300 -747500 1451300 -783590
+     1435000 -783590 1435000 -792500)
+    (connect (terminal pin U3-GND@1) (terminal pin 22uF1-2))
+   )
+   (wire (path B.Cu 6000  1451300 -792500 1435000 -792500)
+    (connect (terminal via) (terminal pin 22uF1-2))
+   )
+   (wire (path B.Cu 6000  1447800 -1046480 1447800 -1036320 1442720 -1036320
+     1442720 -881380 1451300 -881380 1451300 -847500)
+    (connect (terminal wire) (terminal pin U3-GND))
+   )
+   (wire (path F.Cu 6000  1282500 -1082500 1282500 -1056900 1235224 -1056900
+     1235224 -892810 1235710 -892810 1235710 -843280 1206500 -843280
+     1206500 -746000 1226000 -746000)
+    (connect (terminal pin D3-1) (terminal pin T1-8))
+   )
+   (wire (path B.Cu 6000  1447800 -1046480 1397000 -1046480 1397000 -1205230)
+    (connect (terminal wire) (terminal wire))
+   )
+   (wire (path B.Cu 6000  1278890 -1233170 1278890 -1223010 1282500 -1223010
+     1282500 -1122500)
+    (connect (terminal wire) (terminal via))
+   )
+   (wire (path F.Cu 6000  1495000 -1260000 1527810 -1260000 1527810 -1226200
+     1550000 -1226200)
+    (connect (terminal pin 22uF3-2) (terminal pin J1-4))
+   )
+   (wire (path B.Cu 6000  1270000 -1030000 1270000 -1055370 1282500 -1055370
+     1282500 -1082500)
+    (connect (terminal pin U2-1) (terminal pin D3-1))
+   )
+   (wire (path F.Cu 6000  1435000 -1260000 1435000 -1245870 1495000 -1245870
+     1495000 -1260000)
+    (connect (terminal pin 22uF2-2) (terminal pin 22uF3-2))
+   )
+   (wire (path B.Cu 6000  1278890 -1233170 1289050 -1233170 1289050 -1234000
+     1334100 -1234000)
+    (connect (terminal wire) (terminal pin H1-C@1))
+   )
+   (wire (path F.Cu 6000  1282500 -1122500 1327500 -1122500)
+    (connect (terminal via) (terminal pin SW1-1@1))
+   )
+   (wire (path B.Cu 6000  1327500 -1122500 1330000 -1122500 1330000 -1082500)
+    (connect (terminal pin SW1-1@1) (terminal pin D2-1))
+   )
+   (wire (path B.Cu 6000  1327500 -1122500 1292860 -1122500 1292860 -1112520
+     1282500 -1112520 1282500 -1082500)
+    (connect (terminal pin SW1-1@1) (terminal pin D3-1))
+   )
+   (wire (path B.Cu 6000  1470400 -1062500 1470400 -1046480 1447800 -1046480)
+    (connect (terminal pin U1-2) (terminal wire))
+   )
+   (wire (path B.Cu 6000  1278890 -1233170 1257900 -1233170 1257900 -1234000)
+    (connect (terminal wire) (terminal pin H1-C))
+   )
+   (wire (path F.Cu 6000  1282500 -1122500 1262500 -1122500)
+    (connect (terminal via) (terminal pin SW1-1))
+   )
+   (wire (path B.Cu 6000  1427000 -1210000 1427000 -1238250 1435000 -1238250
+     1435000 -1260000)
+    (connect (terminal pin U4-1) (terminal pin 22uF2-2))
+   )
+   (wire (path B.Cu 6000  1427000 -1210000 1407160 -1210000 1407160 -1205230
+     1397000 -1205230)
+    (connect (terminal pin U4-1) (terminal wire))
+   )
+   (wire (path F.Cu 6000  1262500 -1122500 1244600 -1122500 1244600 -1163800
+     1220000 -1163800)
+    (connect (terminal pin SW1-1) (terminal pin A1-4))
+   )
+   (wire (path F.Cu 6000  1334100 -1234000 1347470 -1234000 1347470 -1214600
+     1372400 -1214600)
+    (connect (terminal pin H1-C@1) (terminal pin A1-29))
+   )
+   (wire (path B.Cu 6000  1372400 -1214600 1397000 -1214600 1397000 -1205230)
+    (connect (terminal pin A1-29) (terminal wire))
+   )
+   (via "Via[0-1]_750:450_um" 1451300 -792500)
+   (via "Via[0-1]_750:450_um" 1282500 -1122500)
+   )
+   (Net /5V 
+   (wire (path B.Cu 6000  1475740 -1013409 1475740 -929640 1494790 -929640
+     1494790 -871220 1476700 -871220 1476700 -847500)
+    (connect (terminal via) (terminal pin U3-HV))
+   )
+   (wire (path B.Cu 6000  1329690 -822500 1355000 -822500)
+    (connect (terminal via) (terminal pin R4-1))
+   )
+   (wire (path F.Cu 6000  1306830 -967740 1329690 -967740 1329690 -822500)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1320800 -1030000 1320800 -994410 1320800 -994410
+     1320800 -979170 1306830 -979170 1306830 -967740)
+    (connect (terminal pin U2-3) (terminal via))
+   )
+   (wire (path B.Cu 6000  1495800 -1062500 1495800 -1013409 1475740 -1013409)
+    (connect (terminal pin U1-3) (terminal via))
+   )
+   (wire (path F.Cu 6000  1372400 -1163800 1386840 -1163800 1386840 -1013409
+     1475740 -1013409)
+    (connect (terminal pin A1-27) (terminal via))
+   )
+   (wire (path F.Cu 6000  1320800 -1030000 1356360 -1030000 1356360 -1163800
+     1372400 -1163800)
+    (connect (terminal pin U2-3) (terminal pin A1-27))
+   )
+   (wire (path B.Cu 6000  1517650 -1236571 1517650 -1274485 1416050 -1274485
+     1416050 -1273810 1410000 -1273810 1410000 -1260000)
+    (connect (terminal via) (terminal pin 22uF2-1))
+   )
+   (wire (path F.Cu 6000  1502751 -1168400 1517650 -1168400 1517650 -1236571)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1495800 -1062500 1495800 -1168400 1502751 -1168400)
+    (connect (terminal pin U1-3) (terminal via))
+   )
+   (via "Via[0-1]_750:450_um" 1329690 -822500)
+   (via "Via[0-1]_750:450_um" 1306830 -967740)
+   (via "Via[0-1]_750:450_um" 1475740 -1013409)
+   (via "Via[0-1]_750:450_um" 1517650 -1236571)
+   (via "Via[0-1]_750:450_um" 1502751 -1168400)
+   )
+   (Net /3.3V 
+   (wire (path B.Cu 6000  1380490 -765810 1380490 -746000 1366000 -746000)
+    (connect (terminal via) (terminal pin T1-1))
+   )
+   (wire (path B.Cu 6000  1502410 -783999 1502410 -765810 1476700 -765810)
+    (connect (terminal via) (terminal wire))
+   )
+   (wire (path F.Cu 6000  1502410 -803910 1502410 -783999)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1543977 -1134749 1543977 -901700 1551940 -901700
+     1551940 -822960 1531620 -822960 1531620 -803910 1502410 -803910)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path F.Cu 6000  1460000 -1134749 1543977 -1134749)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1460000 -1134749 1460000 -1135380)
+    (connect (terminal via) (terminal wire))
+   )
+   (wire (path B.Cu 6000  1476700 -747500 1476700 -765810)
+    (connect (terminal pin U3-LV) (terminal wire))
+   )
+   (wire (path F.Cu 6000  1295400 -1030000 1295400 -977900 1339850 -977900
+     1339850 -788670 1379220 -788670 1379220 -765810 1380490 -765810)
+    (connect (terminal pin U2-2) (terminal via))
+   )
+   (wire (path B.Cu 6000  1460000 -1123950 1460000 -1134749)
+    (connect (terminal wire) (terminal via))
+   )
+   (wire (path B.Cu 6000  1460000 -1105000 1460000 -1123950)
+    (connect (terminal pin R5-1) (terminal wire))
+   )
+   (wire (path B.Cu 6000  1460000 -1135380 1460000 -1170940 1427000 -1170940
+     1427000 -1184600)
+    (connect (terminal wire) (terminal pin U4-2))
+   )
+   (wire (path B.Cu 6000  1470000 -1260000 1452400 -1260000 1452400 -1210000)
+    (connect (terminal pin 22uF3-1) (terminal pin U4-3))
+   )
+   (wire (path F.Cu 6000  1427000 -1184600 1407160 -1184600 1407160 -1230630
+     1452400 -1230630 1452400 -1210000)
+    (connect (terminal pin U4-2) (terminal pin U4-3))
+   )
+   (via "Via[0-1]_750:450_um" 1502410 -783999)
+   (via "Via[0-1]_750:450_um" 1502410 -803910)
+   (via "Via[0-1]_750:450_um" 1543977 -1134749)
+   (via "Via[0-1]_750:450_um" 1460000 -1134749)
+   (via "Via[0-1]_750:450_um" 1380490 -765810)
+   )
+   (Net /TX_IN 
+   (wire (path F.Cu 6000  1551940 -782320 1551940 -813810 1480820 -813810
+     1480820 -812800 1475000 -812800 1475000 -800000)
+    (connect (terminal via) (terminal smd JP2-2))
+   )
+   (wire (path B.Cu 6000  1572260 -782320 1551940 -782320)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path F.Cu 6000  1534160 -892810 1572260 -892810 1572260 -782320)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1534160 -1282700 1534160 -892810)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path F.Cu 6000  1220000 -1240000 1235710 -1240000 1235710 -1282700
+     1534160 -1282700)
+    (connect (terminal pin A1-1) (terminal via))
+   )
+   (via "Via[0-1]_750:450_um" 1551940 -782320)
+   (via "Via[0-1]_750:450_um" 1572260 -782320)
+   (via "Via[0-1]_750:450_um" 1534160 -892810)
+   (via "Via[0-1]_750:450_um" 1534160 -1282700)
+   )
+   (Net "Net-(A1-Pad17)" 
+   )
+   (Net /RX_IN 
+   (wire (path F.Cu 6000  1541703 -803910 1541703 -800000 1525000 -800000)
+    (connect (terminal via) (terminal smd JP1-2))
+   )
+   (wire (path B.Cu 6000  1568450 -903249 1568450 -803910 1541703 -803910)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path F.Cu 6000  1397000 -1036320 1397000 -1123950 1534160 -1123950
+     1534160 -903249 1568450 -903249)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1387200 -1192530 1387200 -1036320 1397000 -1036320)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path F.Cu 6000  1386840 -1229360 1386840 -1192530 1387200 -1192530)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1220000 -1214600 1203960 -1214600 1203960 -1283970
+     1388110 -1283970 1388110 -1229360 1386840 -1229360)
+    (connect (terminal pin A1-2) (terminal via))
+   )
+   (via "Via[0-1]_750:450_um" 1541703 -803910)
+   (via "Via[0-1]_750:450_um" 1568450 -903249)
+   (via "Via[0-1]_750:450_um" 1397000 -1036320)
+   (via "Via[0-1]_750:450_um" 1387200 -1192530)
+   (via "Via[0-1]_750:450_um" 1386840 -1229360)
+   )
+   (Net "Net-(A1-Pad18)" 
+   )
+   (Net "Net-(A1-Pad3)" 
+   )
+   (Net /A0 
+   (wire (path B.Cu 6000  1346200 -988469 1346200 -960600 1372400 -960600)
+    (connect (terminal via) (terminal pin A1-19))
+   )
+   (wire (path F.Cu 6000  1346200 -1007971 1346200 -988469)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1334100 -1208600 1334100 -1195070 1346200 -1195070
+     1346200 -1007971)
+    (connect (terminal pin H1-8) (terminal via))
+   )
+   (via "Via[0-1]_750:450_um" 1346200 -988469)
+   (via "Via[0-1]_750:450_um" 1346200 -1007971)
+   )
+   (Net "Net-(A1-Pad20)" 
+   )
+   (Net /A7105_CS 
+   (wire (path F.Cu 6000  1336040 -1018540 1356360 -1018540 1356360 -843280
+     1369060 -843280 1369060 -833120 1527500 -833120 1527500 -847500)
+    (connect (terminal via) (terminal pin U3-HV1))
+   )
+   (wire (path B.Cu 6000  1336040 -1055370 1336040 -1018540)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path F.Cu 6000  1220000 -1138400 1234440 -1138400 1234440 -1106170
+     1346200 -1106170 1346200 -1055370 1336040 -1055370)
+    (connect (terminal pin A1-5) (terminal via))
+   )
+   (via "Via[0-1]_750:450_um" 1336040 -1018540)
+   (via "Via[0-1]_750:450_um" 1336040 -1055370)
+   )
+   (Net "Net-(A1-Pad21)" 
+   )
+   (Net /PPM_IN 
+   (via "Via[0-1]_750:450_um" 1525000 -780000
+    (attr fanout))
+   )
+   (Net "Net-(A1-Pad22)" 
+   )
+   (Net /SCK 
+   (wire (path B.Cu 6000  1316990 -890270 1325880 -890270 1325880 -843280
+     1369060 -843280 1369060 -833120 1502100 -833120 1502100 -847500)
+    (connect (terminal via) (terminal pin U3-HV2))
+   )
+   (wire (path F.Cu 6000  1316990 -927100 1316990 -890270)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1244600 -1066800 1244600 -927100 1316990 -927100)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path F.Cu 6000  1220000 -1087600 1234440 -1087600 1234440 -1066800
+     1244600 -1066800)
+    (connect (terminal pin A1-7) (terminal via))
+   )
+   (via "Via[0-1]_750:450_um" 1316990 -890270)
+   (via "Via[0-1]_750:450_um" 1316990 -927100)
+   (via "Via[0-1]_750:450_um" 1244600 -1066800)
+   )
+   (Net "Net-(A1-Pad23)" 
+   )
+   (Net /MOSI 
+   )
+   (Net "Net-(A1-Pad24)" 
+   )
+   (Net /MISO 
+   )
+   (Net "Net-(A1-Pad25)" 
+   )
+   (Net "Net-(A1-Pad10)" 
+   )
+   (Net "Net-(A1-Pad26)" 
+   )
+   (Net /NRF24_CS 
+   )
+   (Net "Net-(A1-Pad12)" 
+   )
+   (Net "Net-(A1-Pad28)" 
+   )
+   (Net /D10 
+   (wire (path B.Cu 6000  1257900 -1208600 1234440 -1208600 1234440 -935200
+     1220000 -935200)
+    (connect (terminal pin H1-1) (terminal pin A1-13))
+   )
+   )
+   (Net /D11 
+   (wire (path B.Cu 6000  1220000 -909800 1330960 -909800 1330960 -998220
+     1356360 -998220 1356360 -1259400 1334100 -1259400)
+    (connect (terminal pin A1-14) (terminal pin H1-2))
+   )
+   )
+   (Net /D12 
+   )
+   (Net /PB5 
+   (wire (path B.Cu 6000  1273878 -788670 1289050 -788670 1289050 -771700
+     1315000 -771700)
+    (connect (terminal via) (terminal pin R3-2))
+   )
+   (wire (path F.Cu 6000  1216660 -788670 1273878 -788670)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1372400 -884400 1350010 -884400 1350010 -900430
+     1268730 -900430 1268730 -843280 1216660 -843280 1216660 -788670)
+    (connect (terminal pin A1-16) (terminal via))
+   )
+   (wire (path F.Cu 6000  1486049 -1000760 1397000 -1000760 1397000 -884400
+     1372400 -884400)
+    (connect (terminal via) (terminal pin A1-16))
+   )
+   (wire (path B.Cu 6000  1510800 -1105000 1510800 -1070610 1510801 -1070610
+     1510801 -1000760 1486049 -1000760)
+    (connect (terminal pin R5-2) (terminal via))
+   )
+   (via "Via[0-1]_750:450_um" 1273878 -788670)
+   (via "Via[0-1]_750:450_um" 1216660 -788670)
+   (via "Via[0-1]_750:450_um" 1486049 -1000760)
+   )
+   (Net "Net-(D2-Pad2)" 
+   (wire (path F.Cu 6000  1304600 -1082500 1304600 -1047750 1244600 -1047750
+     1244600 -917870 1248410 -917870 1248410 -798830 1328420 -798830
+     1328420 -771700 1355000 -771700)
+    (connect (terminal pin D2-2) (terminal pin R4-2))
+   )
+   )
+   (Net /PPM 
+   )
+   (Net "Net-(J1-Pad2)" 
+   )
+   (Net "Net-(J1-Pad5)" 
+   )
+   (Net "Net-(JP2-Pad1)" 
+   )
+   (Net "Net-(T1-Pad2)" 
+   )
+   (Net "Net-(T1-Pad3)" 
+   )
+   (Net "Net-(T1-Pad4)" 
+   )
+   (Net /MOSI_LV 
+   (wire (path B.Cu 6000  1477800 -1085850 1477800 -1184600)
+    (connect (terminal via) (terminal pin U4-6))
+   )
+   (wire (path F.Cu 6000  1389380 -799239 1389380 -822960 1543050 -822960
+     1543050 -872490 1496060 -872490 1496060 -1026160 1428750 -1026160
+     1428750 -1085850 1477800 -1085850)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1389380 -788670 1389380 -799239)
+    (connect (terminal wire) (terminal via))
+   )
+   (wire (path B.Cu 6000  1316990 -787400 1316990 -788670 1389380 -788670)
+    (connect (terminal via) (terminal wire))
+   )
+   (wire (path F.Cu 6000  1288751 -761949 1288751 -787400 1316990 -787400)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1286000 -746000 1288751 -746000 1288751 -761949)
+    (connect (terminal pin T1-5) (terminal via))
+   )
+   (wire (path B.Cu 6000  1425900 -747500 1425900 -777240 1389380 -777240
+     1389380 -788670)
+    (connect (terminal pin U3-LV3) (terminal wire))
+   )
+   (via "Via[0-1]_750:450_um" 1477800 -1085850)
+   (via "Via[0-1]_750:450_um" 1389380 -799239)
+   (via "Via[0-1]_750:450_um" 1316990 -787400)
+   (via "Via[0-1]_750:450_um" 1288751 -761949)
+   )
+   (Net /SCK_LV 
+   (wire (path B.Cu 6000  1360170 -798830 1259840 -798830 1259840 -758190
+     1266000 -758190 1266000 -746000)
+    (connect (terminal via) (terminal pin T1-6))
+   )
+   (wire (path F.Cu 6000  1371600 -821690 1371600 -808990 1360170 -808990
+     1360170 -798830)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1490980 -821690 1371600 -821690)
+    (connect (terminal wire) (terminal via))
+   )
+   (wire (path B.Cu 6000  1490980 -803910 1490980 -821690)
+    (connect (terminal via) (terminal wire))
+   )
+   (wire (path F.Cu 6000  1502100 -747500 1502100 -773895 1492250 -773895
+     1492250 -792480 1490980 -792480 1490980 -803910)
+    (connect (terminal pin U3-LV2) (terminal via))
+   )
+   (wire (path B.Cu 6000  1490980 -821690 1511300 -821690 1511300 -833120
+     1541780 -833120 1541780 -882650 1524000 -882650 1524000 -1226820
+     1477800 -1226820 1477800 -1210000)
+    (connect (terminal wire) (terminal pin U4-5))
+   )
+   (via "Via[0-1]_750:450_um" 1360170 -798830)
+   (via "Via[0-1]_750:450_um" 1371600 -821690)
+   (via "Via[0-1]_750:450_um" 1490980 -803910)
+   )
+   (Net /A7105_CS_LV 
+   (wire (path B.Cu 6000  1527500 -747500 1527500 -769620 1535430 -769620
+     1535430 -793750 1468120 -793750 1468120 -808990 1250950 -808990
+     1250950 -810260 1248410 -810260 1248410 -758190 1246000 -758190
+     1246000 -746000)
+    (connect (terminal pin U3-LV1) (terminal pin T1-7))
+   )
+   )
+   (Net "Net-(D3-Pad2)" 
+   (wire (path B.Cu 6000  1254760 -947420 1254760 -1056640 1257100 -1056640
+     1257100 -1082500)
+    (connect (terminal via) (terminal pin D3-2))
+   )
+   (wire (path F.Cu 6000  1315000 -838200 1262380 -838200 1262380 -947420
+     1254760 -947420)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path B.Cu 6000  1315000 -822500 1315000 -838200)
+    (connect (terminal pin R3-1) (terminal via))
+   )
+   (wire (path B.Cu 6000  1257100 -1082500 1257100 -1102360 1244600 -1102360
+     1244600 -1167500 1262500 -1167500)
+    (connect (terminal pin D3-2) (terminal pin SW1-2))
+   )
+   (wire (path F.Cu 6000  1262500 -1167500 1327500 -1167500)
+    (connect (terminal pin SW1-2) (terminal pin SW1-2@1))
+   )
+   (via "Via[0-1]_750:450_um" 1254760 -947420)
+   (via "Via[0-1]_750:450_um" 1315000 -838200)
+   )
+   (Net "Net-(U3-PadHV4)" 
+   )
+   (Net "Net-(U3-PadLV4)" 
+   )
+   (Net "Net-(U4-Pad8)" 
+   )
+  )
+ )

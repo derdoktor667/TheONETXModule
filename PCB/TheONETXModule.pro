@@ -1,4 +1,4 @@
-update=30.05.2018 12:29:19
+update=29.08.2018 20:26:42
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,45 +23,18 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=TheONETXModule-rescue
-LibName2=TheONETXParts
-LibName3=C:/temp/DIY-Multiprotocol-TX-Module/PCB v2.3d/Multipro-txV2-3d-cache
-LibName4=power
-LibName5=device
-LibName6=switches
-LibName7=relays
-LibName8=motors
-LibName9=transistors
-LibName10=conn
-LibName11=linear
-LibName12=regul
-LibName13=74xx
-LibName14=cmos4000
-LibName15=adc-dac
-LibName16=memory
-LibName17=xilinx
-LibName18=microcontrollers
-LibName19=dsp
-LibName20=microchip
-LibName21=analog_switches
-LibName22=motorola
-LibName23=texas
-LibName24=intel
-LibName25=audio
-LibName26=interface
-LibName27=digital-audio
-LibName28=philips
-LibName29=display
-LibName30=cypress
-LibName31=siliconi
-LibName32=opto
-LibName33=atmel
-LibName34=contrib
-LibName35=valves
-LibName36=C:/Program Files/KiCad/share/kicad/library/modules
-[general]
+[schematic_editor]
 version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1

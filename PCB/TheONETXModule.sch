@@ -1,57 +1,21 @@
-EESchema Schematic File Version 2
-LIBS:TheONETXModule-rescue
-LIBS:TheONETXParts
-LIBS:Multipro-txV2-3d-cache
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:modules
+EESchema Schematic File Version 4
 LIBS:TheONETXModule-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "TheONETXModule"
+Date "2018-08-29"
+Rev "0.35"
+Comp "wir-sind-die-matrix.de"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L R-RESCUE-TheONETXModule R1
+L TheONETXModule-rescue:R-RESCUE-TheONETXModule R1
 U 1 1 5A918115
 P 2050 5300
 F 0 "R1" V 2130 5300 40  0000 C CNN
@@ -62,40 +26,40 @@ F 3 "" H 2050 5300 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CP1-RESCUE-TheONETXModule 22uF1
+L TheONETXModule-rescue:CP1-RESCUE-TheONETXModule 22uF1
 U 1 1 5A94B537
-P 3000 6300
-F 0 "22uF1" H 3050 6400 50  0000 L CNN
-F 1 "CP1" H 3050 6200 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_Tantal_D4.5mm_P2.50mm" H 3000 6300 60  0001 C CNN
-F 3 "" H 3000 6300 60  0000 C CNN
-	1    3000 6300
+P 2950 6300
+F 0 "22uF1" H 3000 6400 50  0000 L CNN
+F 1 "CP1" H 3000 6200 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 2950 6300 60  0001 C CNN
+F 3 "" H 2950 6300 60  0000 C CNN
+	1    2950 6300
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1-RESCUE-TheONETXModule 22uF2
+L TheONETXModule-rescue:CP1-RESCUE-TheONETXModule 22uF2
 U 1 1 5A94B57A
 P 4000 6300
 F 0 "22uF2" H 4050 6400 50  0000 L CNN
 F 1 "CP1" H 4050 6200 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_Tantal_D4.5mm_P2.50mm" H 4000 6300 60  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 4000 6300 60  0001 C CNN
 F 3 "" H 4000 6300 60  0000 C CNN
 	1    4000 6300
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1-RESCUE-TheONETXModule 22uF3
+L TheONETXModule-rescue:CP1-RESCUE-TheONETXModule 22uF3
 U 1 1 5A94B5A5
 P 5400 6300
 F 0 "22uF3" H 5450 6400 50  0000 L CNN
 F 1 "CP1" H 5450 6200 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_Tantal_D4.5mm_P2.50mm" H 5400 6300 60  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 5400 6300 60  0001 C CNN
 F 3 "" H 5400 6300 60  0000 C CNN
 	1    5400 6300
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED-RESCUE-TheONETXModule D2
+L TheONETXModule-rescue:LED-RESCUE-TheONETXModule D2
 U 1 1 5A94BC0E
 P 4400 6450
 F 0 "D2" H 4400 6550 50  0000 C CNN
@@ -114,18 +78,7 @@ Entry Wire Line
 Entry Wire Line
 	4600 2050 4700 2150
 $Comp
-L A7105-Hubsan T1
-U 1 1 5A94D31E
-P 8150 1900
-F 0 "T1" V 8500 3200 60  0000 C CNN
-F 1 "A7105-Hubsan" H 8150 3000 60  0000 C CNN
-F 2 "customs:A7105" H 8150 2100 60  0001 C CNN
-F 3 "" H 8150 2100 60  0001 C CNN
-	1    8150 1900
-	0    1    1    0   
-$EndComp
-$Comp
-L NRF24L01-RESCUE-TheONETXModule U4
+L TheONETXModule-rescue:NRF24L01-RESCUE-TheONETXModule U4
 U 1 1 5A94D611
 P 8900 3200
 F 0 "U4" H 9200 2600 60  0000 C CNN
@@ -136,76 +89,61 @@ F 3 "" H 8900 2800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND-RESCUE-TheONETXModule #PWR6
+L TheONETXModule-rescue:GND-RESCUE-TheONETXModule #PWR06
 U 1 1 5A94DE18
 P 8050 2650
-F 0 "#PWR6" H 8050 2650 30  0001 C CNN
+F 0 "#PWR06" H 8050 2650 30  0001 C CNN
 F 1 "GND" H 8050 2580 30  0001 C CNN
 F 2 "" H 8050 2650 60  0000 C CNN
 F 3 "" H 8050 2650 60  0000 C CNN
 	1    8050 2650
 	1    0    0    -1  
 $EndComp
-Text Label 7550 1650 0    60   ~ 0
+Text Label 7550 2150 0    60   ~ 0
 A7105_CS_LV
 Text Label 7550 3250 0    60   ~ 0
 SCK_LV
-Text Label 7550 1750 0    60   ~ 0
+Text Label 7550 1950 0    60   ~ 0
 SCK_LV
 Text Label 7550 1850 0    60   ~ 0
 MOSI_LV
 Text Label 7550 3550 0    60   ~ 0
 MISO
-Text Label 7550 3400 0    60   ~ 0
-MOSI
 Entry Wire Line
 	7350 3350 7450 3250
 Entry Wire Line
 	7350 1950 7450 1850
 Entry Wire Line
-	7350 1850 7450 1750
+	7350 2250 7450 2150
 Entry Wire Line
-	7350 1750 7450 1650
+	7350 2050 7450 1950
 $Comp
-L SW_Push SW1
+L TheONETXModule-rescue:SW_Push-switches SW1
 U 1 1 5A94F50A
-P 4500 3100
-F 0 "SW1" H 4300 3200 50  0000 L CNN
-F 1 "Bind Button" H 4500 3025 39  0000 C CNN
-F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 4500 3300 50  0001 C CNN
-F 3 "" H 4500 3300 50  0001 C CNN
-	1    4500 3100
+P 4700 3100
+F 0 "SW1" H 4500 3200 50  0000 L CNN
+F 1 "Bind Button" H 4700 3025 39  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 4700 3300 50  0001 C CNN
+F 3 "" H 4700 3300 50  0001 C CNN
+	1    4700 3100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R-RESCUE-TheONETXModule R3
+L TheONETXModule-rescue:R-RESCUE-TheONETXModule R3
 U 1 1 5A95D6C1
-P 4300 2850
-F 0 "R3" V 4380 2850 40  0000 C CNN
-F 1 "1K" V 4300 2850 40  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4230 2850 30  0001 C CNN
-F 3 "" H 4300 2850 30  0000 C CNN
-	1    4300 2850
+P 4500 2850
+F 0 "R3" V 4580 2850 40  0000 C CNN
+F 1 "1K" V 4500 2850 40  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4430 2850 30  0001 C CNN
+F 3 "" H 4500 2850 30  0000 C CNN
+	1    4500 2850
 	0    1    1    0   
 $EndComp
-NoConn ~ 8200 1950
-NoConn ~ 8200 2050
 $Comp
-L GND-RESCUE-TheONETXModule #PWR5
-U 1 1 5A960123
-P 7250 1550
-F 0 "#PWR5" H 7250 1550 30  0001 C CNN
-F 1 "GND" H 7250 1480 30  0001 C CNN
-F 2 "" H 7250 1550 60  0000 C CNN
-F 3 "" H 7250 1550 60  0000 C CNN
-	1    7250 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND-RESCUE-TheONETXModule #PWR3
+L TheONETXModule-rescue:GND-RESCUE-TheONETXModule #PWR03
 U 1 1 5A960420
 P 5900 6800
-F 0 "#PWR3" H 5900 6800 30  0001 C CNN
+F 0 "#PWR03" H 5900 6800 30  0001 C CNN
 F 1 "GND" H 5900 6730 30  0001 C CNN
 F 2 "" H 5900 6800 60  0000 C CNN
 F 3 "" H 5900 6800 60  0000 C CNN
@@ -213,7 +151,7 @@ F 3 "" H 5900 6800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LogicShift U3
+L TheONETXParts:LogicShift U3
 U 1 1 5A986367
 P 5950 1900
 F 0 "U3" H 6200 1900 60  0000 C CNN
@@ -226,10 +164,10 @@ $EndComp
 Text Label 4950 1850 0    60   ~ 0
 5V
 $Comp
-L GND-RESCUE-TheONETXModule #PWR2
+L TheONETXModule-rescue:GND-RESCUE-TheONETXModule #PWR02
 U 1 1 5A9886D2
 P 5050 1950
-F 0 "#PWR2" H 5050 1950 30  0001 C CNN
+F 0 "#PWR02" H 5050 1950 30  0001 C CNN
 F 1 "GND" H 5050 1880 30  0001 C CNN
 F 2 "" H 5050 1950 60  0000 C CNN
 F 3 "" H 5050 1950 60  0000 C CNN
@@ -237,10 +175,10 @@ F 3 "" H 5050 1950 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND-RESCUE-TheONETXModule #PWR4
+L TheONETXModule-rescue:GND-RESCUE-TheONETXModule #PWR04
 U 1 1 5A988B4E
 P 6950 1950
-F 0 "#PWR4" H 6950 1950 30  0001 C CNN
+F 0 "#PWR04" H 6950 1950 30  0001 C CNN
 F 1 "GND" H 6950 1880 30  0001 C CNN
 F 2 "" H 6950 1950 60  0000 C CNN
 F 3 "" H 6950 1950 60  0000 C CNN
@@ -286,36 +224,36 @@ D11
 Text Label 9700 5050 2    60   ~ 0
 A0
 $Comp
-L GND-RESCUE-TheONETXModule #PWR8
+L TheONETXModule-rescue:GND-RESCUE-TheONETXModule #PWR08
 U 1 1 5A9B4DCF
 P 9700 5400
-F 0 "#PWR8" H 9700 5400 30  0001 C CNN
+F 0 "#PWR08" H 9700 5400 30  0001 C CNN
 F 1 "GND" H 9700 5330 30  0001 C CNN
 F 2 "" H 9700 5400 60  0000 C CNN
 F 3 "" H 9700 5400 60  0000 C CNN
 	1    9700 5400
-	1    0    0    -1  
+	0    -1   -1   0   
 $EndComp
 Text Label 8400 5750 0    60   ~ 0
 D12
 Text Label 3700 2750 0    60   ~ 0
 D12
 $Comp
-L LED-RESCUE-TheONETXModule D3
+L TheONETXModule-rescue:LED-RESCUE-TheONETXModule D3
 U 1 1 5A9B5BF8
-P 4800 3100
-F 0 "D3" H 4800 3200 50  0001 C CNN
-F 1 "LED" H 4800 3000 50  0000 C CNN
-F 2 "LEDs:LED_D3.0mm" H 4800 3100 60  0001 C CNN
-F 3 "" H 4800 3100 60  0000 C CNN
-	1    4800 3100
+P 5000 3100
+F 0 "D3" H 5000 3200 50  0001 C CNN
+F 1 "LED" H 5000 3000 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 5000 3100 60  0001 C CNN
+F 3 "" H 5000 3100 60  0000 C CNN
+	1    5000 3100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND-RESCUE-TheONETXModule #PWR1
+L TheONETXModule-rescue:GND-RESCUE-TheONETXModule #PWR01
 U 1 1 5A9B5D4A
 P 3800 3550
-F 0 "#PWR1" H 3800 3550 30  0001 C CNN
+F 0 "#PWR01" H 3800 3550 30  0001 C CNN
 F 1 "GND" H 3800 3480 30  0001 C CNN
 F 2 "" H 3800 3550 60  0000 C CNN
 F 3 "" H 3800 3550 60  0000 C CNN
@@ -325,22 +263,22 @@ $EndComp
 Text Label 8400 5050 0    60   ~ 0
 D10
 $Comp
-L GND-RESCUE-TheONETXModule #PWR7
+L TheONETXModule-rescue:GND-RESCUE-TheONETXModule #PWR07
 U 1 1 5A9B81B5
 P 8450 5400
-F 0 "#PWR7" H 8450 5400 30  0001 C CNN
+F 0 "#PWR07" H 8450 5400 30  0001 C CNN
 F 1 "GND" H 8450 5330 30  0001 C CNN
 F 2 "" H 8450 5400 60  0000 C CNN
 F 3 "" H 8450 5400 60  0000 C CNN
 	1    8450 5400
-	1    0    0    -1  
+	0    1    1    0   
 $EndComp
 Text Label 3700 2550 0    60   ~ 0
 D10
 Text Label 2250 2150 0    60   ~ 0
 A0
 $Comp
-L Arduino_Nano_v3.x A1
+L TheONETXModule-rescue:Arduino_Nano_v3.x-modules A1
 U 1 1 5A9C6EAC
 P 3150 2150
 F 0 "A1" H 2950 3175 50  0000 R CNN
@@ -360,12 +298,10 @@ NoConn ~ 2650 2550
 NoConn ~ 2650 2850
 NoConn ~ 2650 2750
 NoConn ~ 2650 2650
-Text Label 3250 850  3    60   ~ 0
-5V
 Text Label 7550 3100 0    60   ~ 0
 NRF24_CS
 $Comp
-L HEX_CODER_16 H1
+L TheONETXParts:HEX_CODER_16 H1
 U 1 1 5A9D9572
 P 9050 5550
 F 0 "H1" H 9000 5600 60  0000 C CNN
@@ -376,35 +312,34 @@ F 3 "" H 9050 5550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LD1117S33TR_SOT223 U2
+L TheONETXParts:LD1117S33TR_SOT223 U2
 U 1 1 5A9DA4BA
 P 4950 5950
 F 0 "U2" H 4800 6075 50  0000 C CNN
 F 1 "LD1117S33" H 4950 6075 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220-3_Horizontal" H 4950 6150 50  0001 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 4950 6150 50  0001 C CNN
 F 3 "" H 5050 5700 50  0001 C CNN
 	1    4950 5950
 	1    0    0    -1  
 $EndComp
 $Comp
-L L7805 U1
+L TheONETXParts:L7805 U1
 U 1 1 5A9DA5B0
 P 3550 5950
 F 0 "U1" H 3400 6075 50  0000 C CNN
 F 1 "L7805" H 3550 6075 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220-3_Horizontal" H 3575 5800 50  0001 L CIN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 3575 5800 50  0001 L CIN
 F 3 "" H 3550 5900 50  0001 C CNN
 	1    3550 5950
 	1    0    0    -1  
 $EndComp
 NoConn ~ 3050 1150
-NoConn ~ 2950 1150
 Text Label 3700 1850 0    60   ~ 0
 PPM_IN
 Text Label 3700 1550 0    60   ~ 0
 RX_IN
 $Comp
-L R-RESCUE-TheONETXModule R2
+L TheONETXModule-rescue:R-RESCUE-TheONETXModule R2
 U 1 1 5A9F08FB
 P 2050 5700
 F 0 "R2" V 1950 5650 40  0000 C CNN
@@ -415,7 +350,7 @@ F 3 "" H 2050 5700 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Jumper JP1
+L Device:Jumper JP1
 U 1 1 5A9F1E7A
 P 3000 5100
 F 0 "JP1" H 3000 5250 50  0000 C CNN
@@ -426,7 +361,7 @@ F 3 "" H 3000 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper JP2
+L Device:Jumper JP2
 U 1 1 5A9F2B95
 P 3000 7000
 F 0 "JP2" H 3000 7150 50  0000 C CNN
@@ -447,7 +382,7 @@ Text Label 1650 5600 0    60   ~ 0
 GND
 Text Label 3350 3400 0    60   ~ 0
 GND
-Text Label 7550 1550 0    60   ~ 0
+Text Label 7650 2050 0    60   ~ 0
 GND
 Text Label 8150 2650 0    60   ~ 0
 GND
@@ -480,6 +415,90 @@ Text Label 7550 2800 0    60   ~ 0
 3.3V
 Text Label 7550 2250 0    60   ~ 0
 3.3V
+NoConn ~ 2650 1550
+NoConn ~ 2650 1650
+NoConn ~ 6450 2150
+NoConn ~ 5450 2150
+Text Label 3700 2850 0    60   ~ 0
+PB5
+$Comp
+L TheONETXModule-rescue:R-RESCUE-TheONETXModule R4
+U 1 1 5AB02AC6
+P 4400 6150
+F 0 "R4" V 4500 6200 40  0000 C CNN
+F 1 "1K" V 4400 6150 40  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4330 6150 30  0001 C CNN
+F 3 "" H 4400 6150 30  0000 C CNN
+	1    4400 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L TheONETXParts:Conn_01x05_Female J1
+U 1 1 5A918030
+P 1400 5500
+F 0 "J1" H 1400 5800 50  0000 C CNN
+F 1 "Conn_01x05_Female" H 1400 5200 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 1400 5500 50  0001 C CNN
+F 3 "" H 1400 5500 50  0001 C CNN
+	1    1400 5500
+	-1   0    0    -1  
+$EndComp
+Text Label 5550 5300 0    60   ~ 0
+PPM_IN
+Text Label 1650 5500 0    60   ~ 0
+VBAT+
+$Comp
+L TheONETXModule-rescue:R-RESCUE-TheONETXModule R5
+U 1 1 5B6762A5
+P 4700 2650
+F 0 "R5" V 4780 2650 40  0000 C CNN
+F 1 "10K" V 4700 2650 40  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4630 2650 30  0001 C CNN
+F 3 "" H 4700 2650 30  0000 C CNN
+	1    4700 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L TheONETXModule-rescue:A7105 U5
+U 1 1 5B80F311
+P 8900 1900
+F 0 "U5" H 9200 1450 60  0000 C CNN
+F 1 "A7105" V 9200 2150 60  0000 C CNN
+F 2 "customs:A7106" H 8900 1500 60  0001 C CNN
+F 3 "" H 8900 1500 60  0000 C CNN
+	1    8900 1900
+	1    0    0    1   
+$EndComp
+Text Label 3250 950  1    60   ~ 0
+5V
+Text Label 5150 2650 2    60   ~ 0
+5V_int
+Text Label 2950 950  1    60   ~ 0
+5V_int
+$Comp
+L TheONETXModule-rescue:GND-RESCUE-TheONETXModule #PWR05
+U 1 1 5B855C7A
+P 7500 2050
+F 0 "#PWR05" H 7500 2050 30  0001 C CNN
+F 1 "GND" H 7500 1980 30  0001 C CNN
+F 2 "" H 7500 2050 60  0000 C CNN
+F 3 "" H 7500 2050 60  0000 C CNN
+	1    7500 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5AB1806F
+P 2400 5500
+F 0 "D1" H 2250 5550 50  0000 C CNN
+F 1 "D" H 2500 5550 50  0000 C CNN
+F 2 "Diodes_THT:D_5W_P10.16mm_Horizontal" H 2400 5500 50  0001 C CNN
+F 3 "" H 2400 5500 50  0001 C CNN
+	1    2400 5500
+	-1   0    0    1   
+$EndComp
+Text Label 3250 5800 1    60   ~ 0
+VBAT+
 Wire Wire Line
 	8450 5400 8700 5400
 Wire Wire Line
@@ -505,15 +524,7 @@ Wire Wire Line
 Wire Wire Line
 	4400 5950 4400 6000
 Wire Bus Line
-	7150 1750 7150 3800
-Wire Bus Line
 	7150 3800 7350 3800
-Wire Bus Line
-	7350 3800 7350 1750
-Wire Bus Line
-	4700 1850 4700 2350
-Wire Bus Line
-	4850 1750 4850 2350
 Wire Wire Line
 	6450 2050 7050 2050
 Wire Wire Line
@@ -525,9 +536,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 1650 5450 1650
 Wire Wire Line
-	3250 850  3250 1150
-Wire Wire Line
-	4000 5500 4000 6150
+	4000 5500 4000 5950
 Wire Wire Line
 	2250 2150 2650 2150
 Wire Wire Line
@@ -541,15 +550,7 @@ Wire Wire Line
 Wire Wire Line
 	3650 2350 4150 2350
 Wire Wire Line
-	7250 1550 8200 1550
-Wire Wire Line
 	4950 1850 5450 1850
-Wire Wire Line
-	7450 1850 8200 1850
-Wire Wire Line
-	7450 1750 8200 1750
-Wire Wire Line
-	7450 1650 8200 1650
 Wire Wire Line
 	7450 3550 8250 3550
 Wire Wire Line
@@ -567,18 +568,11 @@ Wire Wire Line
 Connection ~ 4400 5950
 Connection ~ 4000 5950
 Wire Wire Line
-	3000 5500 3000 6150
-Wire Wire Line
-	3850 5950 4650 5950
+	3850 5950 4000 5950
 Wire Wire Line
 	4950 6700 4950 6250
 Wire Wire Line
 	7050 1850 6450 1850
-Wire Wire Line
-	3050 3150 3300 3150
-Connection ~ 3150 3150
-Wire Wire Line
-	2850 6700 5900 6700
 Connection ~ 4950 6700
 Wire Wire Line
 	4400 6600 4400 6700
@@ -587,21 +581,15 @@ Wire Wire Line
 	3550 6250 3550 6700
 Connection ~ 3550 6700
 Wire Wire Line
-	3300 3150 3300 3400
-Wire Wire Line
 	3650 1850 4150 1850
 Wire Wire Line
 	3650 1550 4150 1550
 Wire Wire Line
 	4150 1650 3650 1650
 Wire Wire Line
-	2850 6700 2850 5600
-Wire Wire Line
-	2850 5600 1600 5600
+	2800 5600 1600 5600
 Wire Wire Line
 	1900 5700 1600 5700
-Wire Wire Line
-	3300 3400 4800 3400
 Wire Wire Line
 	3800 3400 3800 3550
 Wire Wire Line
@@ -637,16 +625,16 @@ Wire Wire Line
 Wire Wire Line
 	5900 6700 5900 6800
 Wire Wire Line
-	5250 5950 5900 5950
+	5250 5950 5400 5950
 Wire Wire Line
 	5400 5950 5400 6150
 Connection ~ 5400 5950
 Wire Wire Line
 	5900 5500 4000 5500
 Wire Wire Line
-	7500 2800 8250 2800
+	7500 2800 7900 2800
 Wire Wire Line
-	8200 2250 7500 2250
+	8250 2250 7500 2250
 Wire Wire Line
 	8250 2950 7900 2950
 Wire Wire Line
@@ -658,80 +646,124 @@ Connection ~ 5400 6700
 Wire Wire Line
 	4000 6450 4000 6700
 Connection ~ 4000 6700
-Wire Wire Line
-	3000 6450 3000 6700
-Connection ~ 3000 6700
 Connection ~ 3800 3400
 Wire Wire Line
-	4450 2850 4800 2850
+	4650 2850 4700 2850
 Wire Wire Line
-	4800 2850 4800 2950
+	5000 2850 5000 2950
 Wire Wire Line
-	4800 3400 4800 3250
-NoConn ~ 8200 2150
-NoConn ~ 2650 1550
-NoConn ~ 2650 1650
-NoConn ~ 6450 2150
-NoConn ~ 5450 2150
-Text Label 3700 2850 0    60   ~ 0
-PB5
+	5000 3400 5000 3250
 Wire Wire Line
-	4150 2850 3650 2850
+	3650 2850 4300 2850
 Wire Wire Line
-	4500 2850 4500 2900
-Connection ~ 4500 2850
+	4700 2850 4700 2900
+Connection ~ 4700 2850
 Wire Wire Line
-	4500 3300 4500 3400
-Connection ~ 4500 3400
-$Comp
-L R-RESCUE-TheONETXModule R4
-U 1 1 5AB02AC6
-P 4400 6150
-F 0 "R4" V 4500 6200 40  0000 C CNN
-F 1 "1K" V 4400 6150 40  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4330 6150 30  0001 C CNN
-F 3 "" H 4400 6150 30  0000 C CNN
-	1    4400 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x05_Female J1
-U 1 1 5A918030
-P 1400 5500
-F 0 "J1" H 1400 5800 50  0000 C CNN
-F 1 "Conn_01x05_Female" H 1400 5200 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 1400 5500 50  0001 C CNN
-F 3 "" H 1400 5500 50  0001 C CNN
-	1    1400 5500
-	-1   0    0    -1  
-$EndComp
+	4700 3300 4700 3400
+Connection ~ 4700 3400
 Wire Wire Line
-	2200 5300 5900 5300
-$Comp
-L D D1
-U 1 1 5AB1806F
-P 2400 5500
-F 0 "D1" H 2250 5550 50  0000 C CNN
-F 1 "D" H 2500 5550 50  0000 C CNN
-F 2 "Diodes_THT:D_T-1_P5.08mm_Horizontal" H 2400 5500 50  0001 C CNN
-F 3 "" H 2400 5500 50  0001 C CNN
-	1    2400 5500
-	-1   0    0    1   
-$EndComp
+	2200 5300 2700 5300
 Wire Wire Line
 	2700 5100 2700 5300
 Connection ~ 2700 5300
-Text Label 5550 5300 0    60   ~ 0
-PPM_IN
 Wire Wire Line
-	3250 5950 3000 5950
-Connection ~ 3000 5950
+	4550 2650 4300 2650
 Wire Wire Line
-	2550 5500 3000 5500
-Text Label 1650 5500 0    60   ~ 0
-VBAT+
+	4300 2650 4300 2850
+Connection ~ 4300 2850
+Wire Wire Line
+	4850 2650 5150 2650
+Wire Wire Line
+	7450 1850 8250 1850
+Wire Wire Line
+	7450 2150 8250 2150
+Wire Wire Line
+	7500 2050 8250 2050
+Wire Wire Line
+	7450 1950 8250 1950
+Wire Wire Line
+	8250 1550 8100 1550
+Wire Wire Line
+	8100 1550 8100 1650
+Wire Wire Line
+	8100 1650 8250 1650
+Wire Wire Line
+	8250 1450 8000 1450
+Wire Wire Line
+	8000 1450 8000 1750
+Wire Wire Line
+	8000 1750 8250 1750
+Wire Wire Line
+	3250 950  3250 1150
+Wire Wire Line
+	4400 5950 4650 5950
+Wire Wire Line
+	4000 5950 4000 6150
+Wire Wire Line
+	4000 5950 4400 5950
+Wire Wire Line
+	4950 6700 5400 6700
+Wire Wire Line
+	4400 6700 4950 6700
+Wire Wire Line
+	3550 6700 4000 6700
+Wire Wire Line
+	5400 5950 5900 5950
+Wire Wire Line
+	7900 2800 8250 2800
+Wire Wire Line
+	5400 6700 5900 6700
+Wire Wire Line
+	4000 6700 4400 6700
+Wire Wire Line
+	3800 3400 4700 3400
+Wire Wire Line
+	4700 2850 5000 2850
+Wire Wire Line
+	4700 3400 5000 3400
+Wire Wire Line
+	2700 5300 5900 5300
+Wire Wire Line
+	4300 2850 4350 2850
+Wire Wire Line
+	2950 950  2950 1150
 Wire Wire Line
 	2250 5500 1600 5500
-Text Label 3050 5950 0    39   ~ 0
-VBAT+
+Wire Wire Line
+	2550 5500 2950 5500
+Text Label 7550 3400 0    60   ~ 0
+MOSI
+Wire Wire Line
+	3050 3400 3050 3150
+Wire Wire Line
+	3050 3400 3150 3400
+Wire Wire Line
+	3150 3150 3150 3400
+Connection ~ 3150 3400
+Wire Wire Line
+	3150 3400 3800 3400
+Wire Wire Line
+	2950 5500 2950 6150
+Wire Wire Line
+	2800 6700 2950 6700
+Wire Wire Line
+	2950 6450 2950 6700
+Connection ~ 2950 6700
+Wire Wire Line
+	2950 6700 3550 6700
+Wire Wire Line
+	2800 6700 2800 5600
+Wire Wire Line
+	2950 5500 3250 5500
+Wire Wire Line
+	3250 5500 3250 5950
+Connection ~ 2950 5500
+Wire Bus Line
+	4700 1850 4700 2350
+Wire Bus Line
+	4850 1750 4850 2350
+Wire Bus Line
+	7150 1750 7150 3800
+Wire Bus Line
+	7350 1950 7350 3800
 $EndSCHEMATC
