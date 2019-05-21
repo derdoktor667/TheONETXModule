@@ -3,12 +3,20 @@
   derdoktor667@gmail.com
 */
 
+#include <Arduino.h>
 #include "PinOut.h"
 
-// ...somw global definitions
-#define CPU_MULTI	(F_CPU/8000000)
+// ...some global definitions
+//
+#if F_CPU == 16000000
+	#define CPU_MULTI 1L
+#elif F_CPU == 8000000
+	#define CPU_MULTI 0L
+#else
+	#error // 8 or 16MHz only !
+#endif
 
-#define	AILERON  0
+constexpr auto AILERON = 0;
 #define	ELEVATOR 1
 #define	THROTTLE 2
 #define	RUDDER   3
@@ -18,6 +26,9 @@
 
 // ...the PPM Array to store the Channel values
 int PPM[16];
+
+// ...the Channel in byte code
+byte CHANNEL;
 
 void setup() {
 
@@ -53,10 +64,9 @@ void loop() {
 
 void PPM_Reader() {
 
-	static unsigned int PULSE;
-	static unsigned long COUNTER;
-	static byte CHANNEL;
-	static unsigned long LAST_MICROS;
+	unsigned int PULSE;
+	unsigned long COUNTER;
+	unsigned long LAST_MICROS;
 
 	COUNTER = TCNT1;
 	TCNT1 = 0;
